@@ -1,0 +1,45 @@
+// Load saved data when page loads
+window.onload = () => {
+    const fields = ["initialMoney", "monthlyInterest", "monthlyDeposit", "months"];
+    fields.forEach(id => {
+      const saved = localStorage.getItem(id);
+      if (saved !== null) {
+        document.getElementById(id).value = saved;
+      }
+    });
+  };
+  
+  // Save inputs to localStorage on change
+  document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("input", () => {
+      localStorage.setItem(input.id, input.value);
+    });
+  });
+  
+  function calculate() {
+    const initialMoney = parseFloat(document.getElementById("initialMoney").value);
+    const interest = parseFloat(document.getElementById("monthlyInterest").value) / 100;
+    const monthlyDeposit = parseFloat(document.getElementById("monthlyDeposit").value);
+    const months = parseInt(document.getElementById("months").value);
+  
+    let currentBalance = initialMoney;
+    const resultGrid = document.getElementById("resultGrid");
+    resultGrid.innerHTML = `
+      <div class="tableHeader">Month</div>
+      <div class="tableHeader">Earned</div>
+      <div class="tableHeader">Total</div>
+    `;
+  
+    for (let month = 1; month <= months; month++) {
+      const earned = currentBalance * interest;
+      currentBalance += earned;
+  
+      resultGrid.innerHTML += `
+        <div>${month}</div>
+        <div>${earned.toFixed(0)}</div>
+        <div>${currentBalance.toFixed(0)}</div>
+      `;
+      currentBalance += monthlyDeposit;
+    }
+  }
+  
