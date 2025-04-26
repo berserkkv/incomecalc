@@ -1,9 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: #121212;
-    color: #fff;
+    background: #141414;
+    color: #dad8d8;
     padding: 2rem;
     margin: 0;
+  }
+
+  .logo {
+    color:#dddbdb;
   }
   
   .container {
@@ -15,7 +19,13 @@ body {
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+  /* .form {
+    display: grid; 
+    grid-template-columns: 0.7fr 0.7fr; 
+    max-width: 600px;
+    column-gap: 10px; 
+  }
+   */
   .form label {
     display: block;
     margin: 0.5rem 0;
@@ -25,7 +35,7 @@ body {
   
   input {
     padding: 0.5rem;
-    width: 100%;
+    width: 97%;
     margin-top: 0.3rem;
     border: none;
     border-radius: 4px;
@@ -48,7 +58,7 @@ body {
   .grid {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 0.3fr 1fr 1fr 1fr;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr;
     gap: 0.1rem;
   }
   
@@ -68,12 +78,11 @@ body {
   .grid .text-blue {
     color: #2c1dfc;
   }
-
   .grid .text-grey {
     color: #808080;
   }
   .grid .text-green {
-    color: #05a305;
+    color: #4ca710;
   }
 
   input[type="number"] {

@@ -27,10 +27,10 @@ window.onload = () => {
     let currentBalance = initialMoney;
     const resultGrid = document.getElementById("resultGrid");
     resultGrid.innerHTML = `
-      <div class="tableHeader">Month</div>
+      <div class="tableHeader">No</div>
       <div class="tableHeader">Deposit</div>
-      <div class="tableHeader text-green">Earned</div>
-      <div class="tableHeader text-blue">Total</div>
+      <div class="tableHeader">Earned</div>
+      <div class="tableHeader">Total</div>
     `;
   
     for (let month = 1; month <= months; month++) {

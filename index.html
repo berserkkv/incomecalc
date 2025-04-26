@@ -8,14 +8,15 @@
 </head>
 <body>
   <div class="container">
-    <h1>Income Calculator</h1>
+    <h1 class="logo">Income Calculator</h1>
     <div class="form">
       <label>Initial Money: <input type="number" id="initialMoney" /></label>
       <label>Monthly Interest (%): <input type="number" id="monthlyInterest" /></label>
       <label>Monthly Deposit: <input type="number" id="monthlyDeposit" /></label>
       <label>Months: <input type="number" id="months" /></label>
-      <button onclick="calculate()">Calculate</button>
+      
     </div>
+    <button onclick="calculate()">Calculate</button>
     <div id="resultGrid" class="grid"></div>
   </div>
   <script src="script.js"></script>
