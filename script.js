@@ -28,8 +28,8 @@ window.onload = () => {
     const resultGrid = document.getElementById("resultGrid");
     resultGrid.innerHTML = `
       <div class="tableHeader">Month</div>
-      <div class="tableHeader">Earned</div>
-      <div class="tableHeader">Total Deposit</div>
+      <div class="tableHeader">Deposit</div>
+      <div class="tableHeader text-green">Earned</div>
       <div class="tableHeader text-blue">Total</div>
     `;
   
@@ -38,9 +38,9 @@ window.onload = () => {
       currentBalance += earned;
   
       resultGrid.innerHTML += `
-        <div>${month}</div>
-        <div>${formatNumber(earned.toFixed(0))}</div>
+        <div class="text-grey">${month}</div>
         <div>${formatNumber(totalDeposit.toFixed(0))}</div>
+        <div class="text-green">${formatNumber(earned.toFixed(0))}</div>
         <div class="text-blue">${formatNumber(currentBalance.toFixed(0))}</div>
       `;
       totalDeposit += monthlyDeposit;

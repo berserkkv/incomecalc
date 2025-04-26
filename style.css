@@ -69,6 +69,13 @@ body {
     color: #2c1dfc;
   }
 
+  .grid .text-grey {
+    color: #808080;
+  }
+  .grid .text-green {
+    color: #05a305;
+  }
+
   input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
   }
